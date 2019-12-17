@@ -35,18 +35,7 @@ handleSubmit = event => {
       <form>
         <input type="text" name="firstName" onChange={event => this.handleFirstNameChange(event)} value={this.state.firstName} />
         <input type="text" name="lastName" onChange={event => this.handleLastNameChange(event)} value={this.state.lastName} />
-        handleSubmit = event => {
-    event.preventDefault()
-    let formData = { firstName: this.state.firstName, lastName: this.state.lastName }
-    let dataArray = this.state.submittedData.concat(formData)
-    this.setState({submittedData: dataArray})
-  }
-
-  listOfSubmissions = () => {
-    return this.state.submittedData.map((data, key) => {
-      return <div id={key}><span>{data.firstName}</span> <span>{data.lastName}</span></div>
-    })
-  }
+        
       </form>
     )
   }
